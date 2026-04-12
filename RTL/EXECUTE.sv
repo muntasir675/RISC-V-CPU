@@ -2,6 +2,7 @@ import riscv_pkg::*;
 module EXECUTE(
     input  logic [31:0] register_data1, register_data2, immediate, curr_address,
     input  instr_type inst_info,
+    input logic [31:0] mtvec, mepc,
     output logic [31:0] result, next_address
 );
 
@@ -46,6 +47,15 @@ always_comb begin
             result       = curr_address + 4;
             next_address = (register_data1 + immediate) & ~32'd1;
         end
+        INSTR_ECALL: begin
+            result       = curr_address + 4;
+            next_address = mtvec;
+        end
+        INSTR_MRET: begin
+            result       = 32'b0;
+            next_address = mepc;
+        end
+        INSTR_FENCE: ; // NOP
 
         INSTR_BEQ:  if (register_data1 == register_data2)             next_address = curr_address + immediate;
         INSTR_BNE:  if (register_data1 != register_data2)             next_address = curr_address + immediate;
@@ -53,6 +63,7 @@ always_comb begin
         INSTR_BGE:  if ($signed(register_data1) >= $signed(register_data2)) next_address = curr_address + immediate;
         INSTR_BLTU: if (register_data1 <  register_data2)             next_address = curr_address + immediate;
         INSTR_BGEU: if (register_data1 >= register_data2)             next_address = curr_address + immediate;
+
 
         default: begin
             result       = 32'b0;

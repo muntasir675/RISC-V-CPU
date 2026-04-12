@@ -1,25 +1,12 @@
-BEGIN 1:reg_file:fast:work
-    registers :  1:tb_riscv:fast:work
+BEGIN 1:MEMORY:fast:work
+    write_data :  1:tb_riscv:fast:work
+    inst_info :  1:tb_riscv:fast:work
+    register :  1:tb_riscv:fast:work
 END 
-BEGIN 1:riscv_single_cycle:fast:work
-    opcode :  1:tb_riscv:fast:work
-    immediate :  1:tb_riscv:fast:work
-    reg_write :  1:tb_riscv:fast:work
-    source_reg2_data :  1:tb_riscv:fast:work
-    alu_result :  1:tb_riscv:fast:work
-    program_counter :  1:tb_riscv:fast:work
-    destination_reg_address :  1:tb_riscv:fast:work
-    alu_ctrl :  1:tb_riscv:fast:work
-    source_reg2_address :  1:tb_riscv:fast:work
-    mem_write :  1:tb_riscv:fast:work
-    alu_b :  1:tb_riscv:fast:work
+BEGIN 1:FETCH:fast:work
+    curr_address :  1:tb_riscv:fast:work
+END 
+BEGIN 1:CPU:fast:work
+    result :  1:tb_riscv:fast:work
     instruction :  1:tb_riscv:fast:work
-    instruction_type :  1:tb_riscv:fast:work
-    take_branch :  1:tb_riscv:fast:work
-    source_reg1_address :  1:tb_riscv:fast:work
-    funct3 :  1:tb_riscv:fast:work
-    alu_a :  1:tb_riscv:fast:work
-    funct7 :  1:tb_riscv:fast:work
-    alu_src :  1:tb_riscv:fast:work
-    destination_reg_data :  1:tb_riscv:fast:work
 END 
