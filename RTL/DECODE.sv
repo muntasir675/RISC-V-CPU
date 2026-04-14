@@ -5,17 +5,6 @@ module DECODE(
     output logic [31:0] immediate
 );
 
-// arithmetic register        7777777SSSSSDDDDDFFFAAAAAOOOOOOO   7=funct7(7) S=rs2(5) D=rs1(5) F=funct3(3) A=rd(5) O=opcode(7)
-// arithmetic immediate       IIIIIIIIIIIIIDDDDDFFFAAAAAOOOOOOO  I=immediate(12) D=rs1(5) F=funct3(3) A=rd(5) O=opcode(7)
-// load                       IIIIIIIIIIIIIDDDDDFFFAAAAAOOOOOOO  I=immediate(12) D=rs1(5) F=funct3(3) A=rd(5) O=opcode(7)
-// store                      IIIIIIIDDDDDXXXXXFFFIIIIIOOOOOOO   I=immediate(7) D=rs2(5) X=rs1(5) F=funct3(3) I=immediate(5) O=opcode(7)
-// branch                     IIIIIIIISSSSSDDDDDFFFIIIIIOOOOOOO  I=immediate(8) S=rs2(5) D=rs1(5) F=funct3(3) I=immediate(5) O=opcode(7)
-// jump and link              IIIIIIIIIIIIIIIIIIIIAAAAAOOOOOOO   I=immediate(20) A=rd(5) O=opcode(7)
-// jump and link register     IIIIIIIIIIIIIDDDDDFFFAAAAAOOOOOOO  I=immediate(12) D=rs1(5) F=funct3(3) A=rd(5) O=opcode(7)
-// load upper immediate       IIIIIIIIIIIIIIIIIIIIAAAAAOOOOOOO   I=immediate(20) A=rd(5) O=opcode(7)
-// add upper immediate to pc  IIIIIIIIIIIIIIIIIIIIAAAAAOOOOOOO   I=immediate(20) A=rd(5) O=opcode(7)
-
-
 always_comb begin
     case (instruction[6:0])
         7'b0110011: begin // arithmetic register
@@ -73,19 +62,6 @@ always_comb begin
                 default: inst_info = INSTR_UNKNOWN;
             endcase
         end
-        7'b1110011: begin
-            case (instruction[14:12])
-                3'b000:  inst_info = (instruction[31:20] == 12'h302) ? INSTR_MRET : INSTR_ECALL;
-                3'b001:  inst_info = INSTR_CSRRW;
-                3'b010:  inst_info = INSTR_CSRRS;
-                3'b011:  inst_info = INSTR_CSRRC;
-                3'b101:  inst_info = INSTR_CSRRWI;
-                3'b110:  inst_info = INSTR_CSRRSI;
-                3'b111:  inst_info = INSTR_CSRRCI;
-                default: inst_info = INSTR_UNKNOWN;
-            endcase
-        end
-        7'b0001111: inst_info = INSTR_FENCE;
         7'b1101111: inst_info = INSTR_JAL;
         7'b1100111: inst_info = INSTR_JALR;
         7'b0110111: inst_info = INSTR_LUI;
@@ -107,8 +83,6 @@ always_comb begin
             immediate = {instruction[31:12], 12'b0};
         INSTR_JAL:
             immediate = {{11{instruction[31]}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'b0};
-        INSTR_CSRRWI, INSTR_CSRRSI, INSTR_CSRRCI:
-            immediate = {27'b0, instruction[19:15]};
         default:
             immediate = 32'b0;
     endcase

@@ -38,18 +38,6 @@ package riscv_pkg;
         INSTR_JALR,
         INSTR_LUI,
         INSTR_AUIPC,
-
-        // extra garbage
-        INSTR_CSRRW,
-        INSTR_CSRRS,
-        INSTR_CSRRC,
-        INSTR_CSRRWI,
-        INSTR_CSRRSI,
-        INSTR_CSRRCI,
-        INSTR_ECALL,
-        INSTR_MRET,
-        INSTR_FENCE,
-
         INSTR_UNKNOWN
     } instr_type;
 

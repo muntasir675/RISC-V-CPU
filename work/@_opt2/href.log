@@ -1,6 +1,16 @@
-BEGIN 1:MEMORY:fast:work
-    register :  1:Testbench:fast:work
+BEGIN 1:EXECUTE:fast:work
+    register_data2 :  1:Testbench:fast:work
+    result :  1:Testbench:fast:work
+    register_data1 :  1:Testbench:fast:work
+    immediate :  1:Testbench:fast:work
+    next_address :  1:Testbench:fast:work
 END 
 BEGIN 1:FETCH:fast:work
     instruction_memory :  1:Testbench:fast:work
+    curr_address :  1:Testbench:fast:work
+END 
+BEGIN 1:MEMORY:fast:work
+    inst_info :  1:Testbench:fast:work
+    CSR :  1:Testbench:fast:work
+    register :  1:Testbench:fast:work
 END 
