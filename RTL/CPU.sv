@@ -15,7 +15,6 @@ module CPU #(parameter string PROGRAM_HEX = "")
     logic [31:0]  result;
     logic [31:0]  next_address;
     // MEMORY outputs
-    logic [31:0]  read_data;
     logic [31:0]  register_data1;
     logic [31:0]  register_data2;
 
@@ -52,7 +51,6 @@ module CPU #(parameter string PROGRAM_HEX = "")
         .instruction      (instruction),
         .result           (result),
         .inst_info        (inst_info),
-        .read_data_memory (read_data_memory),
         .register_data1   (register_data1),
         .register_data2   (register_data2)
     );

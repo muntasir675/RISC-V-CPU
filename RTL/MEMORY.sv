@@ -3,11 +3,12 @@ module MEMORY(
     input  logic        clock,nreset,
     input  logic [31:0] address, write_data, instruction, result,
     input  instr_type inst_info,
-    output logic [31:0] read_data_memory, register_data1, register_data2
+    output logic [31:0] register_data1, register_data2
 );
 
 logic [7:0] Storage [0:8191];
 logic [31:0] register[0:31];
+logic [31:0] read_data_memory;
 
 assign register_data1 = register[instruction[19:15]];
 assign register_data2 = register[instruction[24:20]];
