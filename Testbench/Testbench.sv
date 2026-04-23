@@ -22,6 +22,7 @@ end
 CPU #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
     .clock  (clock),
     .nreset (nreset),
+    .debug_out(),
     .ecall_fired ()
 );
 
