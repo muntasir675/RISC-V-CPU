@@ -1,6 +1,6 @@
-BEGIN 1:MEMORY:fast:work
-    register :  1:Testbench:fast:work
-END 
 BEGIN 1:FETCH:fast:work
     instruction_memory :  1:Testbench:fast:work
+END 
+BEGIN 1:MEMORY:fast:work
+    register :  1:Testbench:fast:work
 END 

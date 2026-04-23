@@ -1,21 +1,21 @@
 import riscv_pkg::*;
 module MEMORY(
-    input  logic        clock,nreset,
-    input  logic [31:0] address, write_data, instruction, result,
+    input  logic        clock,
+    input  logic        nreset,
+    input  logic [31:0] address,
+    input  logic [31:0] write_data,
     input  instr_type inst_info,
-    output logic [31:0] register_data1, register_data2
+    output logic [31:0] read_data
 );
 
 logic [7:0] Storage [0:8191];
-logic [31:0] register[0:31];
-logic [31:0] read_data_memory;
-
-assign register_data1 = register[instruction[19:15]];
-assign register_data2 = register[instruction[24:20]];
 
 always_ff @(posedge clock or negedge nreset) begin
-    if(!nreset)
-        for (integer i = 0; i < 32; i = i + 1) register[i] = 32'h0;
+    if(!nreset) begin
+        `ifndef SYNTHESIS
+         for (integer i = 0; i < 8192; i = i + 1) Storage[i] <= 8'h00;
+        `endif
+    end
     else begin
         case (inst_info)
             INSTR_SB: Storage[address] <= write_data[7:0];
@@ -29,27 +29,19 @@ always_ff @(posedge clock or negedge nreset) begin
                 Storage[address+2] <= write_data[23:16];
                 Storage[address+3] <= write_data[31:24];
             end
-            INSTR_ADD,  INSTR_SUB,  INSTR_AND,   INSTR_OR,
-            INSTR_XOR,  INSTR_SLL,  INSTR_SRL,   INSTR_SRA,
-            INSTR_SLT,  INSTR_SLTU, INSTR_ADDI,  INSTR_ANDI,
-            INSTR_ORI,  INSTR_XORI, INSTR_SLLI,  INSTR_SRLI,
-            INSTR_SRAI, INSTR_SLTI, INSTR_SLTIU, INSTR_JAL, 
-            INSTR_JALR, INSTR_LUI,  INSTR_AUIPC:
-                if (instruction[11:7] != 5'b0) register[instruction[11:7]] <= result;
-            INSTR_LW, INSTR_LH, INSTR_LHU, INSTR_LB, INSTR_LBU:
-                if (instruction[11:7] != 5'b0) register[instruction[11:7]] <= read_data_memory;
+            default: begin end
         endcase
     end
 end
 
 always_comb begin
     case (inst_info)
-        INSTR_LB:  read_data_memory = {{24{Storage[address][7]}}, Storage[address]};
-        INSTR_LH:  read_data_memory = {{16{Storage[address+1][7]}}, Storage[address+1], Storage[address]};
-        INSTR_LW:  read_data_memory = {Storage[address+3], Storage[address+2], Storage[address+1], Storage[address]};
-        INSTR_LBU: read_data_memory = {24'b0, Storage[address]};
-        INSTR_LHU: read_data_memory = {16'b0, Storage[address+1], Storage[address]};
-        default:   read_data_memory = 32'b0;
+        INSTR_LB:  read_data = {{24{Storage[address][7]}}, Storage[address]};
+        INSTR_LH:  read_data = {{16{Storage[address+1][7]}}, Storage[address+1], Storage[address]};
+        INSTR_LW:  read_data = {Storage[address+3], Storage[address+2], Storage[address+1], Storage[address]};
+        INSTR_LBU: read_data = {24'b0, Storage[address]};
+        INSTR_LHU: read_data = {16'b0, Storage[address+1], Storage[address]};
+        default:   read_data = 32'b0;
     endcase
 end
 

@@ -38,6 +38,7 @@ package riscv_pkg;
         INSTR_JALR,
         INSTR_LUI,
         INSTR_AUIPC,
+        INSTR_ECALL,
         INSTR_UNKNOWN
     } instr_type;
 

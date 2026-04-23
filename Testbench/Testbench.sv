@@ -6,7 +6,8 @@ logic clock;
 logic nreset;
 
 always #5 clock = ~clock;
-wire [31:0] x28 = u_cpu.u_memory.register[28];
+wire [31:0] x3  = u_cpu.u_writeback.register[3];
+wire ecall = u_cpu.ecall_fired;
 
 initial begin
     clock = 0;
@@ -20,7 +21,8 @@ end
 
 CPU #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
     .clock  (clock),
-    .nreset (nreset)
+    .nreset (nreset),
+    .ecall_fired ()
 );
 
 // initial begin
@@ -68,12 +70,12 @@ initial begin
     foreach (tests[i]) begin
         $readmemh({"Debug/tests/", tests[i]}, u_cpu.u_fetch.instruction_memory);
         nreset = 0; repeat(4) @(posedge clock); nreset = 1;
-        repeat(1000) @(posedge clock);
-        if (u_cpu.u_memory.register[3] == 1) begin
+        @(posedge ecall);
+        if (x3 == 1) begin
             $display("PASS:    %s", tests[i]);
             passed++;
         end else begin
-            $display("FAIL:    %s  gp=%0d", tests[i], u_cpu.u_memory.register[3]);
+            $display("FAIL:    %s  gp=%0d", tests[i], x3);
             failed++;
         end
     end

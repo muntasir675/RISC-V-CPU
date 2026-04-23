@@ -66,6 +66,7 @@ always_comb begin
         7'b1100111: inst_info = INSTR_JALR;
         7'b0110111: inst_info = INSTR_LUI;
         7'b0010111: inst_info = INSTR_AUIPC;
+        7'b1110011: inst_info = (instruction == 32'h00000073) ? INSTR_ECALL : INSTR_UNKNOWN;
         default:    inst_info = INSTR_UNKNOWN;
     endcase
 end
