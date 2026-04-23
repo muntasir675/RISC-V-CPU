@@ -51,6 +51,14 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 Z2 !s12c _opt15
 R1
 R2
@@ -444,10 +452,10 @@ n@_opt15
 R21
 R13
 T_opt16
-!s110 1776954375
-V`P5ng<^ZiSP]iFNUeeJ@P0
-R22
-=1-342eb7175d31-69ea2c07-18f-45a8
+!s110 1776957584
+VEh_48PkYInYlgN0MnRoLk0
+R14
+=1-342eb7175d31-69ea3890-a8-35d4
 R1
 R15
 R16
@@ -552,7 +560,7 @@ Z24 2RTL/CPU.sv
 Z25 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 Z26 DXx4 work 9 riscv_pkg 0 22 dNk_km6`DJ:@Dj3TFVZbJ3
 DXx4 work 11 CPU_sv_unit 0 22 mSZ@X]kb9_LfT9VI?eR4P2
-Z27 !s110 1776954374
+Z27 !s110 1776957583
 Z28 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
@@ -562,14 +570,14 @@ IPU5Ugz;;>M^c[Tao>_j<?0
 !s105 CPU_sv_unit
 S1
 Z29 dC:/Users/Muntasir/Desktop/CPU_Pipelined
-Z30 w1776952907
+Z30 w1776957017
 Z31 8RTL/CPU.sv
 Z32 FRTL/CPU.sv
-!i122 1383
+!i122 1415
 L0 3 283
 Z33 OL;L;2024.3;79
 31
-Z34 !s108 1776954374.000000
+Z34 !s108 1776957583.000000
 Z35 !s107 RTL/CPU.sv|
 Z36 !s90 -sv|RTL/CPU.sv|
 !i113 0
@@ -593,7 +601,7 @@ R29
 R30
 R31
 R32
-!i122 1383
+!i122 1415
 Z38 L0 1 0
 R33
 31
@@ -609,7 +617,7 @@ Z39 2RTL/DECODE.sv
 R25
 R26
 DXx4 work 14 DECODE_sv_unit 0 22 <GL<8NH5AbfQ>AINdVJZV2
-Z40 !s110 1776954373
+Z40 !s110 1776957582
 R28
 r1
 !s85 0
@@ -622,11 +630,11 @@ R29
 Z41 w1776951856
 Z42 8RTL/DECODE.sv
 Z43 FRTL/DECODE.sv
-!i122 1379
+!i122 1411
 L0 2 91
 R33
 31
-Z44 !s108 1776954373.000000
+Z44 !s108 1776957582.000000
 Z45 !s107 RTL/DECODE.sv|
 Z46 !s90 -sv|RTL/DECODE.sv|
 !i113 0
@@ -650,7 +658,7 @@ R29
 R41
 R42
 R43
-!i122 1379
+!i122 1411
 R38
 R33
 31
@@ -666,7 +674,7 @@ Z47 2RTL/EXECUTE.sv
 R25
 R26
 DXx4 work 15 EXECUTE_sv_unit 0 22 OZfkN@WjSLM86iF=UYjQ<3
-R40
+R27
 R28
 r1
 !s85 0
@@ -679,7 +687,7 @@ R29
 Z48 w1776172790
 Z49 8RTL/EXECUTE.sv
 Z50 FRTL/EXECUTE.sv
-!i122 1380
+!i122 1412
 L0 2 61
 R33
 31
@@ -694,7 +702,7 @@ XEXECUTE_sv_unit
 R47
 R25
 R26
-R40
+R27
 VOZfkN@WjSLM86iF=UYjQ<3
 r1
 !s85 0
@@ -707,7 +715,7 @@ R29
 R48
 R49
 R50
-!i122 1380
+!i122 1412
 R38
 R33
 31
@@ -730,7 +738,7 @@ R29
 w1776954367
 8RTL/FETCH.sv
 FRTL/FETCH.sv
-!i122 1378
+!i122 1410
 L0 1 25
 R28
 R33
@@ -811,19 +819,19 @@ R28
 r1
 !s85 0
 !i10b 1
-!s100 5?_hZ1mD7TiM0aMBd7j]M2
-I7QJFF1Y2Q03B@_Ph7ZCGC3
+!s100 KD>Vk[NLiigkM<D;U<=Qf1
+I56:;[:6DH<ObZ801j_f<]3
 !s105 MEMORY_sv_unit
 S1
 R29
-Z65 w1776952078
+Z65 w1776957580
 Z66 8RTL/MEMORY.sv
 Z67 FRTL/MEMORY.sv
-!i122 1381
+!i122 1413
 L0 2 47
 R33
 31
-R44
+R34
 Z68 !s107 RTL/MEMORY.sv|
 Z69 !s90 -sv|RTL/MEMORY.sv|
 !i113 0
@@ -847,11 +855,11 @@ R29
 R65
 R66
 R67
-!i122 1381
+!i122 1413
 R38
 R33
 31
-R44
+R34
 R68
 R69
 !i113 0
@@ -870,7 +878,7 @@ R29
 R41
 8RTL/Instructions.sv
 FRTL/Instructions.sv
-!i122 1377
+!i122 1409
 R38
 VdNk_km6`DJ:@Dj3TFVZbJ3
 R33
@@ -888,7 +896,7 @@ Z70 2Testbench/Run_program.sv
 R25
 R26
 DXx4 work 19 Run_program_sv_unit 0 22 BZ1BP];ma27X_S;1[`dKg0
-R27
+Z71 !s110 1776954374
 R28
 r1
 !s85 0
@@ -899,15 +907,15 @@ ILh7;gj35[InKdi2n5YUkh3
 S1
 R29
 R41
-Z71 8Testbench/Run_program.sv
-Z72 FTestbench/Run_program.sv
+Z72 8Testbench/Run_program.sv
+Z73 FTestbench/Run_program.sv
 !i122 1384
 L0 3 22
 R33
 31
-R34
-Z73 !s107 Testbench/Run_program.sv|
-Z74 !s90 -sv|Testbench/Run_program.sv|
+Z74 !s108 1776954374.000000
+Z75 !s107 Testbench/Run_program.sv|
+Z76 !s90 -sv|Testbench/Run_program.sv|
 !i113 0
 R37
 R20
@@ -916,7 +924,7 @@ XRun_program_sv_unit
 R70
 R25
 R26
-R27
+R71
 VBZ1BP];ma27X_S;1[`dKg0
 r1
 !s85 0
@@ -927,25 +935,25 @@ IBZ1BP];ma27X_S;1[`dKg0
 S1
 R29
 R41
-R71
 R72
+R73
 !i122 1384
 R63
 R33
 31
-R34
-R73
 R74
+R75
+R76
 !i113 0
 R37
 R20
 n@run_program_sv_unit
 vTestbench
-Z75 2Testbench/Testbench.sv
+Z77 2Testbench/Testbench.sv
 R25
 R26
 DXx4 work 17 Testbench_sv_unit 0 22 C_oOhJnS[XGM?O4GK6Ai73
-Z76 !s110 1776954357
+R27
 R28
 r1
 !s85 0
@@ -955,14 +963,14 @@ IK8_bJhk^=cY:VWzZoUAV`3
 !s105 Testbench_sv_unit
 S1
 R29
-Z77 w1776952615
-Z78 8Testbench/Testbench.sv
-Z79 FTestbench/Testbench.sv
-!i122 1376
+Z78 w1776954422
+Z79 8Testbench/Testbench.sv
+Z80 FTestbench/Testbench.sv
+!i122 1416
 L0 3 89
 R33
 31
-Z80 !s108 1776954357.000000
+R34
 Z81 !s107 Testbench/Testbench.sv|
 Z82 !s90 -sv|Testbench/Testbench.sv|
 !i113 0
@@ -970,10 +978,10 @@ R37
 R20
 n@testbench
 XTestbench_sv_unit
-R75
+R77
 R25
 R26
-R76
+R27
 VC_oOhJnS[XGM?O4GK6Ai73
 r1
 !s85 0
@@ -983,14 +991,14 @@ IC_oOhJnS[XGM?O4GK6Ai73
 !i103 1
 S1
 R29
-R77
 R78
 R79
-!i122 1376
+R80
+!i122 1416
 R63
 R33
 31
-R80
+R34
 R81
 R82
 !i113 0
@@ -1009,7 +1017,7 @@ R29
 R41
 8RTL/WRITEBACK.sv
 FRTL/WRITEBACK.sv
-!i122 1382
+!i122 1414
 L0 1 33
 R28
 R33

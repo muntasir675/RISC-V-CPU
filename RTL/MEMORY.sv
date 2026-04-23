@@ -8,7 +8,7 @@ module MEMORY(
     output logic [31:0] read_data
 );
 
-logic [7:0] Storage [0:8191];
+logic [7:0] Storage [0:1023];
 
 always_ff @(posedge clock or negedge nreset) begin
     if(!nreset) begin
