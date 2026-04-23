@@ -1,6 +1,9 @@
-# vsim -t 1ns work.Testbench 
-# Start time: 17:10:29 on Apr 23,2026
+# vsim -t 1ns work.Run_program 
+# Start time: 20:23:24 on Apr 23,2026
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 win64 Sep 10 2024
 # //
@@ -21,6 +24,779 @@
 # Loading work.EXECUTE_sv_unit(fast)
 # Loading work.DECODE_sv_unit(fast)
 # Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 0
+# instr0=xxxxxxxx instr1=xxxxxxxx instr2=xxxxxxxx
+# x1=0 x2=0 x3=0 x10=0 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:16 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:24:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:17 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:24:17 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:17 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:24:17 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:17 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:24:17 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:17 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:24:17 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:17 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:24:17 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:17 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:24:18 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:18 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:24:18 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:24:18 on Apr 23,2026, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 20:24:18 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:48 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:24:48 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:48 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:24:48 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:48 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:24:48 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:48 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:24:49 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:49 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:24:49 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:49 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:24:49 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:49 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:24:49 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:24:49 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:24:49 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:24:49 on Apr 23,2026, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:24:49 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=924 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:12 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:25:12 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:12 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:25:12 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:12 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:25:12 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:12 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:25:12 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:13 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:25:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:13 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:25:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:13 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:25:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:25:13 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:25:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:25:13 on Apr 23,2026, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:25:13 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:04 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:27:04 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:04 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:27:04 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:04 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:27:04 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:04 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:27:04 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:05 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:27:05 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:05 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:27:05 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:05 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:27:05 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:27:05 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:27:05 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:27:05 on Apr 23,2026, Elapsed time: 0:01:52
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:27:05 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# ** Warning: (vsim-7) Failed to open readmem file "program.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : RTL/FETCH.sv(14)
+#    Time: 0 ns  Iteration: 0  Instance: /Run_program/u_cpu/u_fetch
+# fib() = 0
+# instr0=xxxxxxxx instr1=xxxxxxxx instr2=xxxxxxxx
+# x1=0 x2=0 x3=0 x10=0 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:01 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:28:01 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:01 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:28:01 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:01 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:28:01 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:01 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:28:01 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:02 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:28:02 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:02 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:28:02 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:02 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:28:02 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:28:02 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:28:02 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:28:02 on Apr 23,2026, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 1
+# vsim -t 1ns work.Run_program 
+# Start time: 20:28:02 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# ** Warning: (vsim-7) Failed to open readmem file "program.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : RTL/FETCH.sv(14)
+#    Time: 0 ns  Iteration: 0  Instance: /Run_program/u_cpu/u_fetch
+# fib() = 0
+# instr0=xxxxxxxx instr1=xxxxxxxx instr2=xxxxxxxx
+# x1=0 x2=0 x3=0 x10=0 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# Break key hit
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:46 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:29:46 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Control-C interrupt
+# 
+# MACRO ./run2.do PAUSED at line 3
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:49 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:29:49 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:49 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:29:49 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:49 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:50 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:50 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:50 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:50 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:50 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:29:50 on Apr 23,2026, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 1
+# vsim -t 1ns work.Run_program 
+# Start time: 20:29:51 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:58 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:29:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:58 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:29:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:59 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:29:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:59 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:29:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:59 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:29:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:59 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:29:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:59 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:29:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:29:59 on Apr 23,2026
+# vlog -sv Testbench/Testbench.sv 
+# -- Compiling package Testbench_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Testbench
+# 
+# Top level modules:
+# 	Testbench
+# End time: 20:30:00 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 20:30:00 on Apr 23,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Testbench 
+# Start time: 20:30:00 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
 # Loading work.Testbench_sv_unit(fast)
 # Loading work.Testbench(fast)
 # PASS:    rv32ui-p-add.hex
@@ -74,25 +850,25 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:44 on Apr 23,2026
+# Start time: 20:30:05 on Apr 23,2026
 # vlog -sv RTL/Instructions.sv 
 # -- Compiling package riscv_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 17:15:44 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:05 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:44 on Apr 23,2026
+# Start time: 20:30:05 on Apr 23,2026
 # vlog -sv RTL/FETCH.sv 
 # -- Compiling module FETCH
 # 
 # Top level modules:
 # 	FETCH
-# End time: 17:15:44 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:05 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:44 on Apr 23,2026
+# Start time: 20:30:05 on Apr 23,2026
 # vlog -sv RTL/DECODE.sv 
 # -- Compiling package DECODE_sv_unit
 # -- Importing package riscv_pkg
@@ -100,10 +876,10 @@
 # 
 # Top level modules:
 # 	DECODE
-# End time: 17:15:44 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:05 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:44 on Apr 23,2026
+# Start time: 20:30:05 on Apr 23,2026
 # vlog -sv RTL/EXECUTE.sv 
 # -- Compiling package EXECUTE_sv_unit
 # -- Importing package riscv_pkg
@@ -111,10 +887,10 @@
 # 
 # Top level modules:
 # 	EXECUTE
-# End time: 17:15:44 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:05 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:44 on Apr 23,2026
+# Start time: 20:30:05 on Apr 23,2026
 # vlog -sv RTL/MEMORY.sv 
 # -- Compiling package MEMORY_sv_unit
 # -- Importing package riscv_pkg
@@ -122,19 +898,19 @@
 # 
 # Top level modules:
 # 	MEMORY
-# End time: 17:15:44 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:05 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:44 on Apr 23,2026
+# Start time: 20:30:05 on Apr 23,2026
 # vlog -sv RTL/WRITEBACK.sv 
 # -- Compiling module WRITEBACK
 # 
 # Top level modules:
 # 	WRITEBACK
-# End time: 17:15:44 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:06 on Apr 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:45 on Apr 23,2026
+# Start time: 20:30:06 on Apr 23,2026
 # vlog -sv RTL/CPU.sv 
 # -- Compiling package CPU_sv_unit
 # -- Importing package riscv_pkg
@@ -142,10 +918,563 @@
 # 
 # Top level modules:
 # 	CPU
-# End time: 17:15:45 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:30:06 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:15:45 on Apr 23,2026
+# Start time: 20:30:06 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:30:06 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:30:06 on Apr 23,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:30:06 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:13 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:35:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:13 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:35:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:13 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:35:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:13 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:35:13 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:13 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:35:14 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:14 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:35:14 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:14 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:35:14 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:35:14 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:35:14 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:35:14 on Apr 23,2026, Elapsed time: 0:05:08
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 20:35:15 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:22 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:36:22 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:22 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:36:22 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:22 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:36:22 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:22 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:36:23 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:23 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:36:23 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:23 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:36:23 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:23 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:36:23 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:23 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:36:24 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 20:36:24 on Apr 23,2026, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 20:36:24 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# ** Warning: (vsim-7) Failed to open readmem file "program.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : RTL/FETCH.sv(14)
+#    Time: 0 ns  Iteration: 0  Instance: /Run_program/u_cpu/u_fetch
+# fib() = 0
+# instr0=xxxxxxxx instr1=xxxxxxxx instr2=xxxxxxxx
+# x1=0 x2=0 x3=0 x10=0 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:40 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:36:41 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:41 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:36:41 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:41 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:36:41 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:41 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:36:41 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:41 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:36:42 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:42 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:36:42 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:42 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:36:42 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:36:42 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:36:42 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:36:42 on Apr 23,2026, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 3
+# vsim -t 1ns work.Run_program 
+# Start time: 20:36:43 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# ** Warning: (vsim-7) Failed to open readmem file "program.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : RTL/FETCH.sv(14)
+#    Time: 0 ns  Iteration: 0  Instance: /Run_program/u_cpu/u_fetch
+# fib() = 0
+# instr0=xxxxxxxx instr1=xxxxxxxx instr2=xxxxxxxx
+# x1=0 x2=0 x3=0 x10=0 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:35 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:37:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:35 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:37:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:35 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:37:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:36 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:37:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:36 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:37:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:36 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:37:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:36 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:37:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:37:37 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:37:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:37:37 on Apr 23,2026, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 3
+# vsim -t 1ns work.Run_program 
+# Start time: 20:37:37 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:03 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:47:03 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:03 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:47:03 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:03 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:47:03 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:03 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:47:03 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:03 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:47:03 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:04 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:47:04 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:04 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:47:04 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:04 on Apr 23,2026
 # vlog -sv Testbench/Testbench.sv 
 # -- Compiling package Testbench_sv_unit
 # -- Importing package riscv_pkg
@@ -153,13 +1482,13 @@
 # 
 # Top level modules:
 # 	Testbench
-# End time: 17:15:45 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:04 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 17:15:45 on Apr 23,2026, Elapsed time: 0:05:16
+# End time: 20:47:04 on Apr 23,2026, Elapsed time: 0:09:27
 # Errors: 0, Warnings: 0
 # vsim -t 1ns work.Testbench 
-# Start time: 17:15:45 on Apr 23,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 20:47:04 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.riscv_pkg(fast)
 # Loading work.MEMORY_sv_unit(fast)
@@ -181,16 +1510,16 @@
 # PASS:    rv32ui-p-bne.hex
 # PASS:    rv32ui-p-jal.hex
 # PASS:    rv32ui-p-jalr.hex
-# FAIL:    rv32ui-p-lb.hex  gp=5
-# FAIL:    rv32ui-p-lbu.hex  gp=5
-# FAIL:    rv32ui-p-lh.hex  gp=5
-# FAIL:    rv32ui-p-lhu.hex  gp=5
+# PASS:    rv32ui-p-lb.hex
+# PASS:    rv32ui-p-lbu.hex
+# PASS:    rv32ui-p-lh.hex
+# PASS:    rv32ui-p-lhu.hex
 # PASS:    rv32ui-p-lui.hex
-# FAIL:    rv32ui-p-lw.hex  gp=5
+# PASS:    rv32ui-p-lw.hex
 # PASS:    rv32ui-p-or.hex
 # PASS:    rv32ui-p-ori.hex
-# FAIL:    rv32ui-p-sb.hex  gp=5
-# FAIL:    rv32ui-p-sh.hex  gp=5
+# PASS:    rv32ui-p-sb.hex
+# PASS:    rv32ui-p-sh.hex
 # PASS:    rv32ui-p-simple.hex
 # PASS:    rv32ui-p-sll.hex
 # PASS:    rv32ui-p-slli.hex
@@ -203,14 +1532,14 @@
 # PASS:    rv32ui-p-srl.hex
 # PASS:    rv32ui-p-srli.hex
 # PASS:    rv32ui-p-sub.hex
-# FAIL:    rv32ui-p-sw.hex  gp=5
+# PASS:    rv32ui-p-sw.hex
 # PASS:    rv32ui-p-xor.hex
 # PASS:    rv32ui-p-xori.hex
 # ==============================
-#   30/38 passed
+#   38/38 passed
 # ==============================
 # ** Note: $stop    : Testbench/Testbench.sv(87)
-#    Time: 107595 ns  Iteration: 2  Instance: /Testbench
+#    Time: 132435 ns  Iteration: 2  Instance: /Testbench
 # Break at Testbench/Testbench.sv line 87
 # Stopped at Testbench/Testbench.sv line 87
 # ** Warning: (vlib-34) Library already exists at "work".
@@ -219,25 +1548,25 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:25 on Apr 23,2026
+# Start time: 20:47:08 on Apr 23,2026
 # vlog -sv RTL/Instructions.sv 
 # -- Compiling package riscv_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 17:19:25 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:08 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:25 on Apr 23,2026
+# Start time: 20:47:08 on Apr 23,2026
 # vlog -sv RTL/FETCH.sv 
 # -- Compiling module FETCH
 # 
 # Top level modules:
 # 	FETCH
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:01
+# End time: 20:47:08 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:26 on Apr 23,2026
+# Start time: 20:47:08 on Apr 23,2026
 # vlog -sv RTL/DECODE.sv 
 # -- Compiling package DECODE_sv_unit
 # -- Importing package riscv_pkg
@@ -245,10 +1574,10 @@
 # 
 # Top level modules:
 # 	DECODE
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:08 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:26 on Apr 23,2026
+# Start time: 20:47:08 on Apr 23,2026
 # vlog -sv RTL/EXECUTE.sv 
 # -- Compiling package EXECUTE_sv_unit
 # -- Importing package riscv_pkg
@@ -256,10 +1585,10 @@
 # 
 # Top level modules:
 # 	EXECUTE
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:08 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:26 on Apr 23,2026
+# Start time: 20:47:08 on Apr 23,2026
 # vlog -sv RTL/MEMORY.sv 
 # -- Compiling package MEMORY_sv_unit
 # -- Importing package riscv_pkg
@@ -267,19 +1596,19 @@
 # 
 # Top level modules:
 # 	MEMORY
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:08 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:26 on Apr 23,2026
+# Start time: 20:47:08 on Apr 23,2026
 # vlog -sv RTL/WRITEBACK.sv 
 # -- Compiling module WRITEBACK
 # 
 # Top level modules:
 # 	WRITEBACK
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:08 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:26 on Apr 23,2026
+# Start time: 20:47:09 on Apr 23,2026
 # vlog -sv RTL/CPU.sv 
 # -- Compiling package CPU_sv_unit
 # -- Importing package riscv_pkg
@@ -287,10 +1616,334 @@
 # 
 # Top level modules:
 # 	CPU
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:47:09 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:26 on Apr 23,2026
+# Start time: 20:47:09 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:47:09 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:47:09 on Apr 23,2026, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:47:09 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:37 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:47:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:37 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:47:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:37 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:47:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:37 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:47:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:37 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:47:38 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:38 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:47:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:38 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:47:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:38 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:47:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:47:38 on Apr 23,2026, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 20:47:38 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=924 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:58 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:47:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:58 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:47:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:58 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:47:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:59 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:47:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:59 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:47:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:59 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:47:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:59 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:47:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:47:59 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:47:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:47:59 on Apr 23,2026, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:47:59 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:36 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:48:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:36 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:48:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:36 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:48:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:36 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:48:37 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:37 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:48:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:37 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:48:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:37 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:48:37 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:48:37 on Apr 23,2026
 # vlog -sv Testbench/Testbench.sv 
 # -- Compiling package Testbench_sv_unit
 # -- Importing package riscv_pkg
@@ -298,13 +1951,13 @@
 # 
 # Top level modules:
 # 	Testbench
-# End time: 17:19:26 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:37 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 17:19:27 on Apr 23,2026, Elapsed time: 0:03:42
+# End time: 20:48:37 on Apr 23,2026, Elapsed time: 0:00:38
 # Errors: 0, Warnings: 0
 # vsim -t 1ns work.Testbench 
-# Start time: 17:19:27 on Apr 23,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 20:48:37 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.riscv_pkg(fast)
 # Loading work.MEMORY_sv_unit(fast)
@@ -364,25 +2017,25 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:42 on Apr 23,2026
+# Start time: 20:48:43 on Apr 23,2026
 # vlog -sv RTL/Instructions.sv 
 # -- Compiling package riscv_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 17:19:42 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:43 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:42 on Apr 23,2026
+# Start time: 20:48:43 on Apr 23,2026
 # vlog -sv RTL/FETCH.sv 
 # -- Compiling module FETCH
 # 
 # Top level modules:
 # 	FETCH
-# End time: 17:19:42 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:43 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:42 on Apr 23,2026
+# Start time: 20:48:43 on Apr 23,2026
 # vlog -sv RTL/DECODE.sv 
 # -- Compiling package DECODE_sv_unit
 # -- Importing package riscv_pkg
@@ -390,10 +2043,10 @@
 # 
 # Top level modules:
 # 	DECODE
-# End time: 17:19:42 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:43 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:42 on Apr 23,2026
+# Start time: 20:48:43 on Apr 23,2026
 # vlog -sv RTL/EXECUTE.sv 
 # -- Compiling package EXECUTE_sv_unit
 # -- Importing package riscv_pkg
@@ -401,10 +2054,10 @@
 # 
 # Top level modules:
 # 	EXECUTE
-# End time: 17:19:43 on Apr 23,2026, Elapsed time: 0:00:01
+# End time: 20:48:43 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:43 on Apr 23,2026
+# Start time: 20:48:43 on Apr 23,2026
 # vlog -sv RTL/MEMORY.sv 
 # -- Compiling package MEMORY_sv_unit
 # -- Importing package riscv_pkg
@@ -412,19 +2065,19 @@
 # 
 # Top level modules:
 # 	MEMORY
-# End time: 17:19:43 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:44 on Apr 23,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:43 on Apr 23,2026
+# Start time: 20:48:44 on Apr 23,2026
 # vlog -sv RTL/WRITEBACK.sv 
 # -- Compiling module WRITEBACK
 # 
 # Top level modules:
 # 	WRITEBACK
-# End time: 17:19:43 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:44 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:43 on Apr 23,2026
+# Start time: 20:48:44 on Apr 23,2026
 # vlog -sv RTL/CPU.sv 
 # -- Compiling package CPU_sv_unit
 # -- Importing package riscv_pkg
@@ -432,10 +2085,120 @@
 # 
 # Top level modules:
 # 	CPU
-# End time: 17:19:43 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:48:44 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
-# Start time: 17:19:43 on Apr 23,2026
+# Start time: 20:48:44 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 20:48:44 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:48:44 on Apr 23,2026, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 20:48:44 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=3fc10113 instr2=050000ef
+# x1=x x2=716 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:35 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:54:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:35 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 20:54:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:35 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 20:54:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:35 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 20:54:35 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:36 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 20:54:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:36 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 20:54:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:36 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 20:54:36 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 20:54:36 on Apr 23,2026
 # vlog -sv Testbench/Testbench.sv 
 # -- Compiling package Testbench_sv_unit
 # -- Importing package riscv_pkg
@@ -443,13 +2206,13 @@
 # 
 # Top level modules:
 # 	Testbench
-# End time: 17:19:43 on Apr 23,2026, Elapsed time: 0:00:00
+# End time: 20:54:36 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 17:19:43 on Apr 23,2026, Elapsed time: 0:00:16
-# Errors: 0, Warnings: 0
+# End time: 20:54:36 on Apr 23,2026, Elapsed time: 0:05:52
+# Errors: 0, Warnings: 2
 # vsim -t 1ns work.Testbench 
-# Start time: 17:19:43 on Apr 23,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 20:54:37 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.riscv_pkg(fast)
 # Loading work.MEMORY_sv_unit(fast)
@@ -503,5 +2266,918 @@
 #    Time: 131815 ns  Iteration: 2  Instance: /Testbench
 # Break at Testbench/Testbench.sv line 87
 # Stopped at Testbench/Testbench.sv line 87
-# End time: 17:19:57 on Apr 23,2026, Elapsed time: 0:00:14
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:41 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:00:41 on Apr 23,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:41 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:00:41 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:41 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:00:42 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:42 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:00:42 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:42 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:00:42 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:42 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:00:42 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:42 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:00:43 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:00:43 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:00:43 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:00:43 on Apr 23,2026, Elapsed time: 0:06:06
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 21:00:43 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=0ff10113 instr2=050000ef
+# x1=52 x2=4294967247 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:51 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:03:51 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:51 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:03:51 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:51 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:03:51 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:51 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:03:51 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:51 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:03:51 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:52 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:03:52 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:52 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:03:52 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:03:52 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:03:52 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:03:52 on Apr 23,2026, Elapsed time: 0:03:09
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 21:03:52 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=0ff10113 instr2=050000ef
+# x1=52 x2=4294967247 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:19 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:04:19 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:19 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:04:19 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:20 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:20 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:20 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:20 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:20 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:20 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:04:20 on Apr 23,2026, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 21:04:21 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=0ff10113 instr2=050000ef
+# x1=52 x2=4294967247 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:58 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:04:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:58 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:04:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:58 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:04:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:58 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:04:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:58 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:04:58 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:58 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:04:59 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:59 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:04:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:04:59 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:04:59 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:04:59 on Apr 23,2026, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 21:04:59 on Apr 23,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt17
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=00000137 instr1=7d010113 instr2=050000ef
+# x1=x x2=1696 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:27 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:17:28 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:28 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:17:28 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:28 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:17:28 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:28 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:17:28 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:28 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:17:28 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:28 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:17:28 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:28 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:17:29 on Apr 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:29 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:17:29 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:17:29 on Apr 23,2026, Elapsed time: 0:12:30
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 21:17:29 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# ** Warning: (vsim-7) Failed to open readmem file "program.hex" in read mode.
+# No such file or directory. (errno = ENOENT)    : RTL/FETCH.sv(14)
+#    Time: 0 ns  Iteration: 0  Instance: /Run_program/u_cpu/u_fetch
+# fib() = 0
+# instr0=xxxxxxxx instr1=xxxxxxxx instr2=xxxxxxxx
+# x1=0 x2=0 x3=0 x10=0 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:38 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:17:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:38 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:17:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:38 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:17:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:38 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:17:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:38 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:17:38 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:39 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:17:39 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:39 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:17:39 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:17:39 on Apr 23,2026
+# vlog -sv Testbench/Testbench.sv 
+# -- Compiling package Testbench_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Testbench
+# 
+# Top level modules:
+# 	Testbench
+# End time: 21:17:39 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:17:39 on Apr 23,2026, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 3
+# vsim -t 1ns work.Testbench 
+# Start time: 21:17:39 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Testbench_sv_unit(fast)
+# Loading work.Testbench(fast)
+# PASS:    rv32ui-p-add.hex
+# PASS:    rv32ui-p-addi.hex
+# PASS:    rv32ui-p-and.hex
+# PASS:    rv32ui-p-andi.hex
+# PASS:    rv32ui-p-auipc.hex
+# PASS:    rv32ui-p-beq.hex
+# PASS:    rv32ui-p-bge.hex
+# PASS:    rv32ui-p-bgeu.hex
+# PASS:    rv32ui-p-blt.hex
+# PASS:    rv32ui-p-bltu.hex
+# PASS:    rv32ui-p-bne.hex
+# PASS:    rv32ui-p-jal.hex
+# PASS:    rv32ui-p-jalr.hex
+# PASS:    rv32ui-p-lb.hex
+# PASS:    rv32ui-p-lbu.hex
+# PASS:    rv32ui-p-lh.hex
+# PASS:    rv32ui-p-lhu.hex
+# PASS:    rv32ui-p-lui.hex
+# PASS:    rv32ui-p-lw.hex
+# PASS:    rv32ui-p-or.hex
+# PASS:    rv32ui-p-ori.hex
+# PASS:    rv32ui-p-sb.hex
+# PASS:    rv32ui-p-sh.hex
+# PASS:    rv32ui-p-simple.hex
+# PASS:    rv32ui-p-sll.hex
+# PASS:    rv32ui-p-slli.hex
+# PASS:    rv32ui-p-slt.hex
+# PASS:    rv32ui-p-slti.hex
+# PASS:    rv32ui-p-sltiu.hex
+# PASS:    rv32ui-p-sltu.hex
+# PASS:    rv32ui-p-sra.hex
+# PASS:    rv32ui-p-srai.hex
+# PASS:    rv32ui-p-srl.hex
+# PASS:    rv32ui-p-srli.hex
+# PASS:    rv32ui-p-sub.hex
+# PASS:    rv32ui-p-sw.hex
+# PASS:    rv32ui-p-xor.hex
+# PASS:    rv32ui-p-xori.hex
+# ==============================
+#   38/38 passed
+# ==============================
+# ** Note: $stop    : Testbench/Testbench.sv(87)
+#    Time: 131815 ns  Iteration: 2  Instance: /Testbench
+# Break at Testbench/Testbench.sv line 87
+# Stopped at Testbench/Testbench.sv line 87
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:15 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:18:15 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:15 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:18:15 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:16 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:16 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:16 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:16 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:16 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:18:16 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:18:16 on Apr 23,2026, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 0
+# vsim -t 1ns work.Run_program 
+# Start time: 21:18:17 on Apr 23,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 2584
+# instr0=40000113 instr1=050000ef instr2=0000006f
+# x1=8 x2=1024 x3=0 x10=2584 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work work 
+# Modifying modelsim.ini
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:08 on Apr 23,2026
+# vlog -sv RTL/Instructions.sv 
+# -- Compiling package riscv_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:19:08 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:08 on Apr 23,2026
+# vlog -sv RTL/FETCH.sv 
+# -- Compiling module FETCH
+# 
+# Top level modules:
+# 	FETCH
+# End time: 21:19:08 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:08 on Apr 23,2026
+# vlog -sv RTL/DECODE.sv 
+# -- Compiling package DECODE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module DECODE
+# 
+# Top level modules:
+# 	DECODE
+# End time: 21:19:08 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:08 on Apr 23,2026
+# vlog -sv RTL/EXECUTE.sv 
+# -- Compiling package EXECUTE_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module EXECUTE
+# 
+# Top level modules:
+# 	EXECUTE
+# End time: 21:19:08 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:08 on Apr 23,2026
+# vlog -sv RTL/MEMORY.sv 
+# -- Compiling package MEMORY_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module MEMORY
+# 
+# Top level modules:
+# 	MEMORY
+# End time: 21:19:08 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:08 on Apr 23,2026
+# vlog -sv RTL/WRITEBACK.sv 
+# -- Compiling module WRITEBACK
+# 
+# Top level modules:
+# 	WRITEBACK
+# End time: 21:19:08 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:09 on Apr 23,2026
+# vlog -sv RTL/CPU.sv 
+# -- Compiling package CPU_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 21:19:09 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 21:19:09 on Apr 23,2026
+# vlog -sv Testbench/Run_program.sv 
+# -- Compiling package Run_program_sv_unit
+# -- Importing package riscv_pkg
+# -- Compiling module Run_program
+# 
+# Top level modules:
+# 	Run_program
+# End time: 21:19:09 on Apr 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:19:09 on Apr 23,2026, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2
+# vsim -t 1ns work.Run_program 
+# Start time: 21:19:09 on Apr 23,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 4, found 3.
+# ** Warning: Testbench/Run_program.sv(19): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.riscv_pkg(fast)
+# Loading work.MEMORY_sv_unit(fast)
+# Loading work.EXECUTE_sv_unit(fast)
+# Loading work.DECODE_sv_unit(fast)
+# Loading work.CPU_sv_unit(fast)
+# Loading work.Run_program_sv_unit(fast)
+# Loading work.Run_program(fast)
+# fib() = 1
+# instr0=40000113 instr1=050000ef instr2=0000006f
+# x1=x x2=720 x3=0 x10=1 x11=0
+# ** Note: $stop    : Testbench/Run_program.sv(17)
+#    Time: 10000075 ns  Iteration: 1  Instance: /Run_program
+# Break at Testbench/Run_program.sv line 17
+# Stopped at Testbench/Run_program.sv line 17

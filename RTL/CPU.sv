@@ -142,7 +142,6 @@ module CPU #(parameter PROGRAM_HEX = "program.hex")
 
     MEMORY u_memory (
         .clock            (clock),
-        .nreset           (nreset),
         .address          (exmem_result),
         .write_data       (exmem_store_data),
         .inst_info        (exmem_inst_info),
@@ -176,6 +175,7 @@ module CPU #(parameter PROGRAM_HEX = "program.hex")
             (decode_uses_rs1 && (idex_rd_addr == ifid_instruction[19:15])) ||
             (decode_uses_rs2 && (idex_rd_addr == ifid_instruction[24:20]))
         );
+
 
     assign fetch_stall = load_use_hazard;
     assign execute_flush = (execute_next_address != (idex_pc + 32'd4));
