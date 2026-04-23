@@ -13,7 +13,7 @@ logic [7:0] Storage [0:1023];
 always_ff @(posedge clock or negedge nreset) begin
     if(!nreset) begin
         `ifndef SYNTHESIS
-         for (integer i = 0; i < 8192; i = i + 1) Storage[i] <= 8'h00;
+         for (integer i = 0; i < 1023; i = i + 1) Storage[i] <= 8'h00;
         `endif
     end
     else begin
