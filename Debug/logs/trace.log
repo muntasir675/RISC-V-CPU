@@ -1,8 +1,9 @@
 # vsim -t 1ns work.Testbench 
-# Start time: 22:59:57 on Apr 14,2026
+# Start time: 17:38:34 on Apr 23,2026
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: RTL/CPU.sv(47): (vopt-2241) Connection width does not match width of port 'read_data_memory'. The port definition is at: RTL/MEMORY.sv(6).
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# ** Warning: Testbench/Testbench.sv(21): (vopt-2685) [TFMPC] - Too few port connections for 'u_cpu'.  Expected 3, found 2.
+# ** Warning: Testbench/Testbench.sv(21): (vopt-2718) [TFMPC] - Missing connection for port 'debug_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2024.3 win64 Sep 10 2024
 # //
@@ -69,3 +70,6 @@
 # ** Note: $stop    : Testbench/Testbench.sv(84)
 #    Time: 381515 ns  Iteration: 1  Instance: /Testbench
 # Break at Testbench/Testbench.sv line 84
+# Stopped at Testbench/Testbench.sv line 84
+# End time: 17:39:00 on Apr 23,2026, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 2

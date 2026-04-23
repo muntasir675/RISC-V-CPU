@@ -1,9 +1,10 @@
 import riscv_pkg::*;
 
-module CPU #(parameter string PROGRAM_HEX = "")
+module CPU #(parameter PROGRAM_HEX = "program.hex")
 (
     input logic clock,
-    input logic nreset
+    input logic nreset,
+    output logic [31:0] debug_out
 );
     // FETCH outputs
     logic [31:0] instruction;
@@ -18,7 +19,8 @@ module CPU #(parameter string PROGRAM_HEX = "")
     logic [31:0]  register_data1;
     logic [31:0]  register_data2;
 
-
+    assign debug_out = result;
+    
     FETCH #(.PROGRAM_HEX(PROGRAM_HEX)) u_fetch (
         .clock        (clock),
         .nreset       (nreset),
@@ -46,8 +48,6 @@ module CPU #(parameter string PROGRAM_HEX = "")
     MEMORY u_memory (
         .clock            (clock),
         .nreset           (nreset),
-        .address          (result),
-        .write_data       (register_data2),
         .instruction      (instruction),
         .result           (result),
         .inst_info        (inst_info),
@@ -56,4 +56,3 @@ module CPU #(parameter string PROGRAM_HEX = "")
     );
 
 endmodule
-
