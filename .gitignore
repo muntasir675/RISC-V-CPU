@@ -1,0 +1,5 @@
+xpack-riscv-none-elf-gcc-15.2.0-1/
+Debug/
+work/
+*.wlf
+*.log
