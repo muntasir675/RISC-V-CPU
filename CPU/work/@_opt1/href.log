@@ -1,0 +1,12 @@
+BEGIN 1:EXECUTE:fast:work
+    result :  1:Testbench:fast:work
+END 
+BEGIN 1:MEMORY:fast:work
+    CSR :  1:Testbench:fast:work
+    register :  1:Testbench:fast:work
+    inst_info :  1:Testbench:fast:work
+END 
+BEGIN 1:FETCH:fast:work
+    curr_address :  1:Testbench:fast:work
+    instruction :  1:Testbench:fast:work
+END 
