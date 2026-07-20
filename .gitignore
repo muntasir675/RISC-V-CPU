@@ -1,5 +1,9 @@
 xpack-riscv-none-elf-gcc-15.2.0-1/
-Debug/
+**/Debug/__temp.log
+**/Debug/logs/
+**/Debug/sim_out.log
+**/Debug/work/
 work/
 *.wlf
 *.log
+modelsim.ini
