@@ -70,7 +70,7 @@ defparam
     u_data_ram.ram_block_type = "M10K";
 
 `else
-// Simulation path - ORIGINAL (don't fuck with this)
+// Simulation path - ORIGINAL (don't touch this)
 (* ramstyle = "M10K, no_rw_check" *) logic [31:0] storage [0:WORD_COUNT-1];
 
 always_ff @(posedge clock) begin

@@ -15,7 +15,7 @@ assign register_data2 = register[instruction[24:20]]; // these you will put into
 
 always_ff @(posedge clock or negedge nreset) begin
     if(!nreset)
-        for (integer i = 0; i < 32; i = i + 1) register[i] = 32'h0;
+        for (integer i = 0; i < 32; i = i + 1) register[i] <= 32'h0;
     else begin
         case (inst_info)
             INSTR_SB: Storage[result] <= register_data2[7:0];
