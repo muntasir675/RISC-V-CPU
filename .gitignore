@@ -7,3 +7,4 @@ work/
 *.wlf
 *.log
 modelsim.ini
+needs change.bat
