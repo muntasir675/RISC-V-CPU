@@ -1,6 +1,0 @@
-BEGIN 1:FETCH:fast:work
-    instruction_memory :  1:Run_program:fast:work
-END 
-BEGIN 1:WRITEBACK:fast:work
-    register :  1:Run_program:fast:work
-END 
