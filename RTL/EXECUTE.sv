@@ -44,12 +44,12 @@ always_comb begin
             next_address = (register_data1 + immediate) & ~32'd1;
         end
 
-        INSTR_BEQ:  if (register_data1 == register_data2)             next_address = curr_address + immediate;
-        INSTR_BNE:  if (register_data1 != register_data2)             next_address = curr_address + immediate;
+        INSTR_BEQ:  if (register_data1 == register_data2)                   next_address = curr_address + immediate;
+        INSTR_BNE:  if (register_data1 != register_data2)                   next_address = curr_address + immediate;
         INSTR_BLT:  if ($signed(register_data1) <  $signed(register_data2)) next_address = curr_address + immediate;
         INSTR_BGE:  if ($signed(register_data1) >= $signed(register_data2)) next_address = curr_address + immediate;
-        INSTR_BLTU: if (register_data1 <  register_data2)             next_address = curr_address + immediate;
-        INSTR_BGEU: if (register_data1 >= register_data2)             next_address = curr_address + immediate;
+        INSTR_BLTU: if (register_data1 <  register_data2)                   next_address = curr_address + immediate;
+        INSTR_BGEU: if (register_data1 >= register_data2)                   next_address = curr_address + immediate;
 
 
         default: begin

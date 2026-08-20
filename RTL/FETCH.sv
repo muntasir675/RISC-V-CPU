@@ -10,9 +10,10 @@ module FETCH #(
 );
 
 logic [31:0] instruction_memory [0:1023];
-
 initial $readmemh(PROGRAM_HEX, instruction_memory);
-assign instruction = instruction_memory[curr_address[30:2]];
+
+// Word-indexed fetch: drop PC[1:0] since every instruction is 4 bytes
+assign instruction = instruction_memory[curr_address[31:2]]; 
 
 always_ff @(posedge clock or negedge nreset) begin
     if (!nreset)

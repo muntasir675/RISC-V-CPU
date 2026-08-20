@@ -71,7 +71,7 @@ always_comb begin
     endcase
 end
 
-// might be better in its own module
+// immediate value assign
 always_comb begin
     case (inst_info)
         INSTR_ADDI, INSTR_SLTI, INSTR_SLTIU,INSTR_XORI, INSTR_ORI, INSTR_ANDI,INSTR_SLLI, INSTR_SRLI, INSTR_SRAI,INSTR_LB, INSTR_LH, INSTR_LW, INSTR_LBU, INSTR_LHU,INSTR_JALR:
