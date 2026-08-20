@@ -4,7 +4,8 @@ RISC-V processor implementation in SystemVerilog.
 Implements a subset of RV32I with a 5-stage pipelined architecture.
 
 ## Structure
-- `CPU_Pipelined/` — 5-stage pipelined CPU with hazard detection and forwarding
+- `RTL/` — pipelined CPU RTL (fetch, decode, execute, memory, writeback)
+- `Testbench/` — simulation testbenches
 - `program.c` — Fibonacci test (`fib(19)`) compiled to `program.hex` and loaded into the CPU
 
 ## RV32I Test Suite

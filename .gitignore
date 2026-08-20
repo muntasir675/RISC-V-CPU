@@ -1,5 +1,4 @@
 xpack-riscv-none-elf-gcc-15.2.0-1/
-CPU_single_cycle/
 **/Debug/__temp.log
 **/Debug/logs/
 **/Debug/sim_out.log
