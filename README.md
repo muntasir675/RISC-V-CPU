@@ -1,10 +1,9 @@
 # RISC-V-CPU
 
 RISC-V processor implementation in SystemVerilog.
-Implements a subset of RV32I with both single-cycle and 5-stage pipelined architectures.
+Implements a subset of RV32I with a 5-stage pipelined architecture.
 
 ## Structure
-- `CPU/` — Single-cycle CPU (fetch, decode, execute, memory, writeback)
 - `CPU_Pipelined/` — 5-stage pipelined CPU with hazard detection and forwarding
 - `program.c` — Fibonacci test (`fib(19)`) compiled to `program.hex` and loaded into the CPU
 
