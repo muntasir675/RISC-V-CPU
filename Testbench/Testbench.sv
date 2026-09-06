@@ -25,16 +25,23 @@ CPU2 #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
 // initial begin
 //     wait(nreset == 1);
 //     forever @(posedge clock) begin
-//         $display("PC:%8d  %-12s  val1:%11d  val2:%11d  imm:%11d  result:%11d  next_pc:%8d",
-//             u_cpu.u_fetch.curr_address,
-//             u_cpu.u_memory.inst_info.name(),
-//             u_cpu.u_execute.register_data1,
-//             u_cpu.u_execute.register_data2,
-//             u_cpu.u_execute.immediate,
-//             u_cpu.u_execute.result,
-//             u_cpu.u_execute.next_address);
+//         if (u_cpu.curr_address_d2 >= 515 && u_cpu.curr_address_d2 <= 555) begin
+//             $display("[DBG t=%0t] EX_PC:%0d | EX_inst:%s (d2=0x%h, rd=%0d) | MEM_inst:%s (d3=0x%h, rd=%0d) | WB_inst:%s (d4=0x%h, rd=%0d)",
+//                 $time,
+//                 u_cpu.curr_address_d2,
+//                 u_cpu.inst_info_d1.name(), u_cpu.instruction_d2, u_cpu.instruction_d2[11:7],
+//                 u_cpu.inst_info_d2.name(), u_cpu.instruction_d3, u_cpu.instruction_d3[11:7],
+//                 u_cpu.inst_info_d3.name(), u_cpu.instruction_d4, u_cpu.instruction_d4[11:7]);
+//             $display("         DEC_inst:%s (d1=0x%h, rs1=%0d, rs2=%0d) | stall=%0b | mem_rd_data=0x%h | res_d1=0x%h",
+//                 u_cpu.inst_info.name(), u_cpu.instruction_d1, u_cpu.instruction_d1[19:15], u_cpu.instruction_d1[24:20],
+//                 u_cpu.stall, u_cpu.read_data, u_cpu.result_d1);
+//             $display("         EX_in_val1=0x%h (%0d) | EX_in_val2=0x%h (%0d) | EX_res=0x%h",
+//                 u_cpu.u_execute.register_data1, $signed(u_cpu.u_execute.register_data1),
+//                 u_cpu.u_execute.register_data2, $signed(u_cpu.u_execute.register_data2),
+//                 u_cpu.u_execute.result);
+//         end
 //         if (u_cpu.u_memory.inst_info == INSTR_ECALL) begin
-//             $display("ECALL fired");
+//             $display("ECALL fired at time %0t", $time);
 //         end
 //     end
 // end
@@ -55,8 +62,7 @@ initial begin
         "rv32ui-p-srli.hex",  "rv32ui-p-sub.hex",   "rv32ui-p-sw.hex",
         "rv32ui-p-xor.hex",   "rv32ui-p-xori.hex"
     };
-    // automatic string tests[] = '{
-    //     "rv32ui-p-add.hex"
+    // automatic string tests[] = '{ "rv32ui-p-lb.hex"
     // };
     automatic int passed = 0, failed = 0;
 

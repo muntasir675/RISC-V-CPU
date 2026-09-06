@@ -8,10 +8,11 @@ vlog -sv RTL/EXECUTE.sv
 vlog -sv RTL/MEMORY.sv
 vlog -sv RTL/WRITEBACK.sv
 vlog -sv RTL/CPU2.sv
-vlog -sv Testbench/Testbench.sv
+vlog -sv Testbench/Run_program.sv
 
 # transcript file Debug/logs/trace.log
 
-vsim -t 1ns work.Testbench
+vsim -t 1ns work.Run_program
 
 run -all
+quit -f
