@@ -6,24 +6,20 @@ logic clock;
 logic nreset;
 
 always #5 clock = ~clock;
-wire [31:0] x3  = u_cpu.u_writeback.register[3];
-wire ecall = u_cpu.ecall_fired;
+wire [31:0] x3 = u_cpu.u_writeback.registers[3];
+wire [31:0] debug_out;
+wire ecall;
 
 initial begin
     clock = 0;
     nreset = 0;
-    @(posedge clock);
-    @(posedge clock);
-    @(posedge clock);
-    @(posedge clock);
-    nreset = 1;
 end
 
-CPU #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
-    .clock  (clock),
-    .nreset (nreset),
-    .debug_out(),
-    .ecall_fired ()
+CPU2 #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
+    .clock       (clock),
+    .nreset      (nreset),
+    .debug_out   (debug_out),
+    .ecall_fired (ecall)
 );
 
 // initial begin
@@ -38,14 +34,7 @@ CPU #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
 //             u_cpu.u_execute.result,
 //             u_cpu.u_execute.next_address);
 //         if (u_cpu.u_memory.inst_info == INSTR_ECALL) begin
-//             $display("ECALL fired: mtvec=0x%0x mepc=0x%0x mcause=0x%0x",
-//                 u_cpu.u_memory.CSR[1],
-//                 u_cpu.u_memory.CSR[2],
-//                 u_cpu.u_memory.CSR[3]);
-//         end
-//         if (u_cpu.u_memory.inst_info == INSTR_MRET) begin
-//             $display("MRET fired: returning to mepc=0x%0x",
-//                 u_cpu.u_memory.CSR[2]);
+//             $display("ECALL fired");
 //         end
 //     end
 // end
@@ -66,17 +55,32 @@ initial begin
         "rv32ui-p-srli.hex",  "rv32ui-p-sub.hex",   "rv32ui-p-sw.hex",
         "rv32ui-p-xor.hex",   "rv32ui-p-xori.hex"
     };
+    // automatic string tests[] = '{
+    //     "rv32ui-p-add.hex"
+    // };
     automatic int passed = 0, failed = 0;
 
     foreach (tests[i]) begin
         $readmemh({"Debug/tests/", tests[i]}, u_cpu.u_fetch.instruction_memory);
-        nreset = 0; repeat(4) @(posedge clock); nreset = 1;
-        @(posedge ecall);
-        if (x3 == 1) begin
+        nreset = 0; 
+        repeat(4) @(posedge clock); 
+        nreset = 1;
+
+        fork
+            begin
+                @(posedge ecall);
+            end
+            begin
+                repeat(2000) @(posedge clock);
+            end
+        join_any
+        disable fork;
+
+        if (ecall && x3 == 1) begin
             $display("PASS:    %s", tests[i]);
             passed++;
         end else begin
-            $display("FAIL:    %s  gp=%0d", tests[i], x3);
+            $display("FAIL:    %s  (gp=%0d, ecall=%0b)", tests[i], x3, ecall);
             failed++;
         end
     end

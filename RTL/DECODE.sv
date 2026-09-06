@@ -2,7 +2,8 @@ import riscv_pkg::*;
 module DECODE(
     input  logic [31:0] instruction,
     output instr_type inst_info,
-    output logic [31:0] immediate
+    output logic [31:0] immediate,
+    output logic enable
 );
 
 always_comb begin
@@ -86,6 +87,21 @@ always_comb begin
             immediate = {{11{instruction[31]}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'b0};
         default:
             immediate = 32'b0;
+    endcase
+end
+
+// enable write to register
+always_comb begin
+    case (inst_info)
+        INSTR_ADD, INSTR_SUB, INSTR_AND, INSTR_OR, INSTR_XOR,
+        INSTR_SLL, INSTR_SRL, INSTR_SRA, INSTR_SLT, INSTR_SLTU,
+        INSTR_ADDI, INSTR_ANDI, INSTR_ORI, INSTR_XORI,
+        INSTR_SLLI, INSTR_SRLI, INSTR_SRAI, INSTR_SLTI, INSTR_SLTIU,
+        INSTR_LB, INSTR_LH, INSTR_LW, INSTR_LBU, INSTR_LHU,
+        INSTR_JAL, INSTR_JALR, INSTR_LUI, INSTR_AUIPC:
+            enable = 1'b1;
+        default:
+            enable = 1'b0;
     endcase
 end
 

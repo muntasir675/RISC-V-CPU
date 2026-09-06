@@ -4,6 +4,7 @@ module FETCH #(
     input  logic clock,
     input  logic nreset,
     input  logic stall,
+    input  logic flush,
     input  logic [31:0] next_address,
     output logic [31:0] instruction,
     output logic [31:0] curr_address
@@ -18,9 +19,12 @@ assign instruction = instruction_memory[curr_address[31:2]];
 always_ff @(posedge clock or negedge nreset) begin
     if (!nreset)
         curr_address <= 32'b0;
-    else if (!stall) begin
-        curr_address <= next_address;
-    end
+    else if (stall)
+        curr_address <= curr_address;      // hold, for load-use hazard
+    else if (flush)
+        curr_address <= next_address;      // take EXECUTE's redirect
+    else
+        curr_address <= curr_address + 4;  // normal march forward
 end
 
 endmodule

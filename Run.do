@@ -7,10 +7,10 @@ vlog -sv RTL/DECODE.sv
 vlog -sv RTL/EXECUTE.sv
 vlog -sv RTL/MEMORY.sv
 vlog -sv RTL/WRITEBACK.sv
-vlog -sv RTL/CPU.sv
+vlog -sv RTL/CPU2.sv
 vlog -sv Testbench/Testbench.sv
 
-transcript file Debug/logs/trace.log
+# transcript file Debug/logs/trace.log
 
 vsim -t 1ns work.Testbench
 

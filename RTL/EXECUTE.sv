@@ -2,8 +2,11 @@ import riscv_pkg::*;
 module EXECUTE(
     input  logic [31:0] register_data1, register_data2, immediate, curr_address,
     input  instr_type inst_info,
+    output logic flush,
     output logic [31:0] result, next_address
 );
+
+assign flush = (next_address != curr_address + 4);
 
 always_comb begin
     result = 32'b0;
@@ -51,11 +54,6 @@ always_comb begin
         INSTR_BLTU: if (register_data1 <  register_data2)                   next_address = curr_address + immediate;
         INSTR_BGEU: if (register_data1 >= register_data2)                   next_address = curr_address + immediate;
 
-
-        default: begin
-            result       = 32'b0;
-            next_address = curr_address + 4;
-        end
     endcase
 end
 
