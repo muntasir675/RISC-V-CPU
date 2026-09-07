@@ -7,4 +7,4 @@ work/
 *.wlf
 *.log
 modelsim.ini
-
+synth/

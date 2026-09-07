@@ -15,7 +15,7 @@ initial begin
     nreset = 0;
 end
 
-CPU2 #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
+CPU #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
     .clock       (clock),
     .nreset      (nreset),
     .debug_out   (debug_out),
@@ -40,7 +40,7 @@ CPU2 #(.PROGRAM_HEX("Debug/tests/rv32ui-p-add.hex")) u_cpu (
 //                 u_cpu.u_execute.register_data2, $signed(u_cpu.u_execute.register_data2),
 //                 u_cpu.u_execute.result);
 //         end
-//         if (u_cpu.u_memory.inst_info == INSTR_ECALL) begin
+//         if (u_cpu.u_memory.inst_info == ECALL) begin
 //             $display("ECALL fired at time %0t", $time);
 //         end
 //     end
@@ -62,8 +62,6 @@ initial begin
         "rv32ui-p-srli.hex",  "rv32ui-p-sub.hex",   "rv32ui-p-sw.hex",
         "rv32ui-p-xor.hex",   "rv32ui-p-xori.hex"
     };
-    // automatic string tests[] = '{ "rv32ui-p-lb.hex"
-    // };
     automatic int passed = 0, failed = 0;
 
     foreach (tests[i]) begin
